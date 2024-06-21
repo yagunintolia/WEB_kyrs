@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function add(a, b) {
+            console.log(`${a} + ${b} = ${a + b}`);
+        }
+
+        function sub(a, b) {
+            console.log(`${a} - ${b} = ${a - b}`);
+        }
+
+        function mul(a, b) {
+            console.log(`${a} * ${b} = ${a * b}`);
+        }
+
+        function div(a, b) {
+            if (b !== 0) {
+                console.log(`${a} / ${b} = ${a / b}`);
+            } else {
+                console.log("Помилка: ділення на нуль!");
+            }
+        }
+
+        let num1 = parseFloat(prompt("Введіть перше число:"));
+        let num2 = parseFloat(prompt("Введіть друге число:"));
+        let operation = prompt("Виберіть операцію (Add, Sub, Mul, Div):").toLowerCase();
+
+        switch (operation) {
+            case 1:
+                add(num1, num2);
+                break;
+            case 2:
+                sub(num1, num2);
+                break;
+            case 3:
+                mul(num1, num2);
+                break;
+            case 4:
+                div(num1, num2);
+                break;
+            default:
+                console.log("Невідома операція!");
+        }
+
+    </script>
+</body>
+
+</html>

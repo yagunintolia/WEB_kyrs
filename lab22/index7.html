@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function modifyMatrix() {
+            let matrix = [];
+            for (let i = 0; i < 5; i++) {
+                matrix[i] = [];
+                for (let j = 0; j < 5; j++) {
+                    matrix[i][j] = Math.random() < 0.5 ? Math.floor(Math.random() * 10) * (Math.random() < 0.5 ? -1 : 1) : Math.floor(Math.random() * 10) * (Math.random() < 0.5 ? -1 : 1);
+                }
+            }
+
+            let originalMatrix = matrix.map(row => [...row]);
+
+            console.log("Початкова матриця:");
+            console.log(originalMatrix);
+
+            for (let i = 0; i < 5; i++) {
+                if (matrix[i][i] < 0) {
+                    matrix[i][i] = 0;
+                } else {
+                    matrix[i][i] = 1;
+                }
+            }
+
+            return matrix;
+        }
+
+        console.log(modifyMatrix());
+    </script>
+</body>
+
+</html>

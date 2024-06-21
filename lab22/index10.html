@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function reverseArr(arr) {
+            return arr.map((val) => {
+                return isNaN(val) ? val : val * val;
+            });
+        }
+        let array = [1, 2, 'a', 4, 'b', 6];
+        console.log(reverseArr(array));
+    </script>
+</body>
+
+</html>

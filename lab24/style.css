@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+div{
+    margin: 0 auto;
+}
+
+#container{
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.all{
+    padding: 20px;
+    background-color: rgb(200, 232, 102);
+    border-radius: 20px;
+    box-shadow: 15px 15px 20px rgba(98, 84, 84, 0.662);
+}
+
+h1{
+    text-align: center;
+}
+
+img{
+    width: 250px;
+    height: 200px;
+    margin-bottom: 20px;
+    border-radius: 100px;
+}
+
+p{
+    margin: 20px 0;
+    font-size: 20px;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let size = 10;
+
+        function arrSummary(n) {
+            const arr = [];
+            for (let i = 0; i < n; i++) {
+                let randomNum = Math.floor(Math.random() * 100);
+                arr.push(randomNum);
+            }
+            const max = Math.max(...arr);
+            const min = Math.min(...arr);
+            const sum = arr.reduce((curr, next) => curr + next);
+            const avg = sum / arr.length;
+            const odd = arr.filter((val) => val % 2 !== 0);
+            return { arr, max, min, sum, avg, odd };
+        }
+
+        console.log(arrSummary(size))
+    </script>
+</body>
+
+</html>

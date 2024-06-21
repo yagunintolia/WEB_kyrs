@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function checkNum(num) {
+            const isPositive = num > 0 ? true : false;
+            const isPrime = () => {
+                if (num <= 1) {
+                    return false;
+                }
+                for (let i = 2; i <= Math.sqrt(num); i++) {
+                    if (num % i === 0) {
+                        return false;
+                    }
+                }
+                return true;
+            };
+            const isDivisible =
+                num % 2 == 0 &&
+                num % 5 == 0 &&
+                num % 3 == 0 &&
+                num % 6 == 0 &&
+                num % 9 == 0
+            return { isPositive, isPrime: isPrime(), isDivisible };
+        }
+        console.log(checkNum(12))
+    </script>
+</body>
+
+</html>

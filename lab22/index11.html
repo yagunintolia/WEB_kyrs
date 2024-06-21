@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function duplic(arr) {
+            const map = new Map();
+            const noDuplic = [];
+            for (let i = 0; i < arr.length; i++) {
+                if (!map.has(arr[i])) {
+                    map.set(arr[i], 1);
+                    noDuplic.push(arr[i]);
+                }
+            }
+            return noDuplic;
+        }
+        let array = [1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6]
+        console.log(duplic(array))
+    </script>
+</body>
+
+</html>
